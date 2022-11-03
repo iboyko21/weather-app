@@ -25,21 +25,21 @@
   .displayweather .maincard .cardsubtitle {
     position: absolute;
     left: 10px;
-  
     color: grey;
     margin-top: -8px;
   }
+
   .displayweather h1 {
-    font-size: 5rem;
-    margin: -10px;
-    margin-left: -150px;
+    font-size: 40px;
+    /* margin: -10px; */
+    /* margin-left: -150px; */
   }
   
   .displayweather .weather-icon {
     width: 100px;
-  
     position: absolute;
     top: 50px;
+    right: 50px;
   }
   
   .displayweather .weather-main {
