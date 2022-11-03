@@ -18,7 +18,7 @@ function Weather() {
         if(form.city === ""){
             alert("Add Values");
         } else {
-            const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${form.city},${form.country}&appid=${APIKEY}`)
+            const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${form.city},${form.country}&appid=${APIKEY}&units=imperial`)
             .then(res => res.json())
             .then(data => data);
 

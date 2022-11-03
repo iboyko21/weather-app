@@ -5,11 +5,11 @@ import Weather from './components/weather';
 function App() {
 
   return (
-    <div className="container">
+    <div className="App">
       <Weather />
     </div>
   );
-  
+
 }
 
 export default App;
