@@ -4,7 +4,6 @@ import "./displayweather.css";
 function DisplayWeather(props) {
     const {data} = props;
     console.log(data)
-
     const iconurl = `http://openweathermap.org/img/wn/${data.cod != 404 ? data.weather[0].icon : null}.png`;
     
     return (
@@ -13,18 +12,17 @@ function DisplayWeather(props) {
                 <React.Fragment>
                     <div className="maincard">
                         <span className="cardtitle">
-                            {data.name}, {data.sys.country} Weather
+                            {data.name}, {data.sys.country}
                         </span>
                         <span className="cardsubtitle">
                             As of {new Date().toLocaleTimeString()}
                         </span>
                         <h1>
-                            {Math.floor(data.main.temp)} 
-                            <sup>o</sup>
+                            {Math.floor(data.main.temp)}
+                            <sup>o</sup> F
                         </h1>
-                        <span className="weather-main">{data.weather[0].main}</span>
+                        <span className="weather-main">{data.weather[0].description}</span>
                         <img src={iconurl} className="weather-icon" alt=""/>
-                        <span className="weather-description">{data.weather[0].description}</span>
                     </div>
 
                     <div className="weatherdetails">
@@ -32,7 +30,7 @@ function DisplayWeather(props) {
                             <table>
                                 <tr>
                                     <td>
-                                        <h4>High/Low</h4>
+                                        <h4>High / Low</h4>
                                     </td>
                                     <td>
                                         <span>
@@ -73,8 +71,8 @@ function DisplayWeather(props) {
                                         </span>
                                     </td>
                                 </tr>
-
                             </table>
+                            
                         </div>
                         <div className="section2">
                             <table>
@@ -121,7 +119,6 @@ function DisplayWeather(props) {
                                         </span>
                                     </td>
                                 </tr>
-
                             </table>
                         </div>
                     </div>

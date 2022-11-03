@@ -23,29 +23,27 @@
   }
   
   .displayweather .maincard .cardsubtitle {
+    margin-top: -8px;
     position: absolute;
     left: 10px;
-  
     color: grey;
-    margin-top: -8px;
+    font-size: 13px;
   }
   .displayweather h1 {
     font-size: 5rem;
     margin: -10px;
-    margin-left: -150px;
+    margin-left: -250px;
   }
   
   .displayweather .weather-icon {
     width: 100px;
-  
     position: absolute;
     top: 50px;
   }
   
   .displayweather .weather-main {
     position: absolute;
-  
-    top: 120px;
+    top: 130px;
     left: 310px;
     font-weight: 500;
     font-size: 1.2rem;

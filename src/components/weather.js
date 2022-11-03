@@ -7,8 +7,7 @@ function Weather() {
     const APIKEY = "35744fcbc64af99ab966567e92a887df";
 
     const [form, setForm] = useState({
-        city: "",
-        country: ""
+        city: ""
     });
 
     const [weather, setWeather] = useState([])
@@ -18,7 +17,7 @@ function Weather() {
         if(form.city === ""){
             alert("Add Values");
         } else {
-            const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${form.city},${form.country}&appid=${APIKEY}&units=imperial`)
+            const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${form.city}&appid=${APIKEY}&units=imperial`)
             .then(res => res.json())
             .then(data => data);
 
@@ -35,9 +34,6 @@ function Weather() {
         if(name === "city") {
             setForm({...form, city: value})
         }
-        if(name === "country") {
-            setForm({...form, country: value})
-        }
     }
 
     return (
@@ -47,7 +43,6 @@ function Weather() {
 
             <form>
                 <input type="text" name="city" placeholder="city" onChange={e => handleChange(e)}/>
-                <input type="text" name="country" placeholder="country" onChange={e => handleChange(e)}/>
                 <button className="getweather" onClick={(e) => weatherData(e)}>
                     Submit
                 </button>
