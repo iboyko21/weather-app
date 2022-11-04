@@ -3,9 +3,6 @@ import DisplayWeather from "./DisplayWeather";
 import "./weather.css";
 
 function Weather() {
-
-    const APIKEY = "35744fcbc64af99ab966567e92a887df";
-
     const [form, setForm] = useState({
         city: ""
     });
@@ -17,7 +14,7 @@ function Weather() {
         if(form.city === ""){
             alert("Add Values");
         } else {
-            const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${form.city}&appid=${APIKEY}&units=imperial`)
+            const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${form.city}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`)
             .then(res => res.json())
             .then(data => data);
 
