@@ -6,12 +6,12 @@
   
   .displayweather .maincard {
     width: 500px;
-    margin-top: 20px;
+    margin-top: 50px;
     align-self: center;
     padding: 50px;
     border-radius: 20px;
     position: relative;
-    background: rgb(245, 242, 242);
+    background: silver;
     border: 1px solid black;
   }
   
@@ -32,13 +32,14 @@
   .displayweather h1 {
     font-size: 5rem;
     margin: -10px;
-    margin-left: -250px;
+    /* margin-left: 0px; */
   }
   
   .displayweather .weather-icon {
     width: 100px;
     position: absolute;
     top: 50px;
+    left: 320px;
   }
   
   .displayweather .weather-main {

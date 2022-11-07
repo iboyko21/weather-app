@@ -3,12 +3,12 @@ import "./displayweather.css";
 
 function DisplayWeather(props) {
     const {data} = props;
-    // console.log(data)
-    const iconurl = `http://openweathermap.org/img/wn/${data.cod != 404 ? data.weather[0].icon : null}.png`;
+    console.log(data)
+    const iconurl = `http://openweathermap.org/img/wn/${data.cod !== 404 ? data.weather[0].icon : null}.png`;
     
     return (
         <div className="displayweather">
-            {data.cod != 404 ? (
+            {data.cod !== 404 ? (
                 <React.Fragment>
                     <div className="maincard">
                         <span className="cardtitle">
