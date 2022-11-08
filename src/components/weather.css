@@ -15,13 +15,7 @@
   }
   .weather form input {
     padding: 10px;
-    border: none;
     margin-right: 10px;
-  }
-  
-  .weather form input:focus {
-    outline: none;
-    border: 1.5px solid rgb(2, 57, 88);
   }
   
   /* button */
