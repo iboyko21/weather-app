@@ -47,9 +47,7 @@ function Weather() {
 
             {
                 weather.data !== undefined ? 
-                <div>
-                    <DisplayWeather data={weather.data}/>
-                </div>
+                <div><DisplayWeather data={weather.data}/></div>
                 : null
             }
         </div>
